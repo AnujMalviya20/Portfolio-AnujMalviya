@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-app-bg text-text-primary antialiased;
+  }
+
+  /* Apply the image background only to the hero section. Keep a dark
+     overlay for legibility. Make sure the JPG is placed in `public/` so
+     it is available at `/milica-spasojevic-8NYDK56hQhM.jpg`. */
+  #hero {
+    background-image: linear-gradient(rgba(11,11,15,0.62), rgba(11,11,15,0.62)), url('/milica-spasojevic-8NYDK56hQhM.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

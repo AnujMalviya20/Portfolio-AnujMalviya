@@ -1,0 +1,1 @@
+cp ~/Downloads/milica-spasojevic-8NYDK56hQhM.jpg ./public/
