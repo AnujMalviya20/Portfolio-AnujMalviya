@@ -109,4 +109,7 @@ anujportfolio/
 ## License
 
 MIT License - feel free to use this template for your own portfolio!
-33
+
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com)
+3. Vercel will automatically dete
