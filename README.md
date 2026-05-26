@@ -109,5 +109,3 @@ anujportfolio/
 ## License
 
 MIT License - feel free to use this template for your own portfolio!
-
-1. Push your code to GitHub
