@@ -58,7 +58,6 @@ Alternatively, use the Vercel CLI:
 npm i -g vercel
 vercel
 ```
-
 ## Customization
 
 ### Update Contact Information
