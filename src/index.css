@@ -15,15 +15,47 @@
      overlay for legibility. Make sure the JPG is placed in `public/` so
      it is available at `/milica-spasojevic-8NYDK56hQhM.jpg`. */
   #hero {
-    background-image: linear-gradient(rgba(11,11,15,0.62), rgba(11,11,15,0.62)), url('/milica-spasojevic-8NYDK56hQhM.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: transparent;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@keyframes text-blur-in {
+  from { filter: blur(8px); opacity: 0; }
+  to { filter: blur(0); opacity: 1; }
+}
+
+.animate-text-blur-in {
+  animation-name: text-blur-in;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0px rgba(124,58,237,0); }
+  50% { box-shadow: 0 0 24px rgba(124,58,237,0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+@keyframes aurora-shimmer {
+  from { background-position: -100% 0; }
+  to { background-position: 200% 0; }
+}
+
+.animate-aurora-shimmer {
+  animation: aurora-shimmer 8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-text-blur-in, .animate-pulse-glow, .animate-aurora-shimmer {
+    animation: none !important;
+    filter: blur(0) !important;
+    opacity: 1 !important;
   }
 }
