@@ -1,12 +1,20 @@
+import { motion } from 'framer-motion'
+
 const Contact = () => {
   // resume download removed per request
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold mb-12 text-center text-white"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
           Let's Connect
-        </h2>
+        </motion.h2>
         
         <div className="bg-app-surface border border-app-border rounded-lg p-8 md:p-12 shadow-card-soft">
           <p className="text-xl text-text-secondary text-center mb-8">
@@ -15,7 +23,7 @@ const Contact = () => {
           
           <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 mb-8">
             <a
-              href="mailto:anuj20malviya@gmail.com"
+              href="mailto:anujmalviyayt@gmail.com"
               className="flex items-center justify-center px-6 py-3 bg-app-card border border-app-border hover:border-accent-primary/60 rounded-lg transition-colors text-text-primary hover:shadow-accent-soft"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
