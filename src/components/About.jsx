@@ -1,10 +1,18 @@
+import { motion } from 'framer-motion'
+
 const About = () => {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-app-surface">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold mb-12 text-center text-white"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
           About Me
-        </h2>
+        </motion.h2>
         
         <div className="prose prose-invert max-w-none">
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed text-center">

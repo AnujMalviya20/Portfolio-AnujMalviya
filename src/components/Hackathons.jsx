@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 const Hackathons = () => {
   const events = [
     {
@@ -94,9 +96,15 @@ const Hackathons = () => {
   return (
     <section id="hackathons" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold mb-12 text-center text-white"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
           Hackathons & Events
-        </h2>
+        </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {events.map((event, index) => (
